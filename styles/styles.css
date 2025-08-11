@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .font-noto{
 font-family: "Work Sans", sans-serif;
 }
@@ -24,27 +30,189 @@ font-family: "Work Sans", sans-serif;
     font-size: 20px;
     color: #00000080;
 }
+.span-text{
+    color: #e95a08;
+}
 .list-item{
     margin-top: 20px;
+}
+.section-gap{
+    margin-top: 60px;
+
 }
 .flower-cintainer{
     gap: 50px;
 }
+.deals-heading{
+    flex-direction: column;
+    align-items: center;
+}
+.deals-heading {
+    text-align: center;
+}
+/* card section */
+.cart-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 28px;
+    margin-top: 120px;
+}
+.card {
+height: 200px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+color: white;
+gap: 16px;
+border-radius: 15px;
+}
+.bloom {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("");
+}
+.ana {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("");
+}
+.zabo {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("");
+    grid-column: 2/3;
+    grid-row: 1/3;
+    height: 100%;
+}
+
+.card span{
+    text-decoration: underline;
+}
+.newsletter-section{
+    background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url("./");
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+}
+.newsletter-section h2{
+color: white;
+}
+.submission-box{
+    display: flex;
+    width: 70%;
+}
+.newsletter-section button{
+    background-color: #e95a08;
+    padding: 20px 50px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+}
+.submission-box input[type="email"]{
+width: 100%;
+padding: 8px 20px;
+outline: none;
+}
+.submission-box input[type="email"] ::placeholder{
+    font-size: 16px;
+    color: #00000080;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: white;
+    padding: 20px 40px;
+    font-family: Arial, sans-serif;
+    border-top: 1px solid #ddd;
+}
+.footer-left {
+     max-width: 135px;
+}
+.footer-left .logo {
+    width: 135px;
+    margin-bottom: 10px;
+}
+.footer-links {
+text-decoration: none;
+color: gray;
+}
+.footer-left p{ 
+    line-height: 1.5;
+}
+.footer-links {
+    display: flex;
+    gap: 60px;
+}
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-links li {
+    margin-bottom: 8px;
+}
+.footer-links a {
+    text-decoration: none;
+    font-size: 14px;
+}
+.footer-social{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.footer-social img {
+    width: 36px;
+    height: 36px;
+}
+
 @media screen and (max-width: 576px) {
-    .flower-cintainer{
+    .flower-cintainer {
         flex-direction: column;
     }
-    .heading{
+    .heading {
         font-size: 24px;
         margin: 0;
     }
     br {
         display: none;
     }
-    .paragraph{
+    .paragraph {
         font-size: 14px;
     }
-    .list-item{
+    .list-item {
         margin-top: 16px;
     }
+    .cart-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 46px;
+    }
+   .card {
+    height: 200px;
+   }
+    .zabo {
+    grid-column: auto;
+    grid-row: auto;
+}
+.newsletter-section button{
+    padding: 8px 20px;
+}
+
+.newsletter-section h2{
+    font-size: 20px;
+}
+.footer{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.footer-links ul {
+    flex-direction: column;
+    gap: 10px;
+}
+.footer .footer-social{
+    margin-top: 15px;
+}
 }
